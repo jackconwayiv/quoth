@@ -1,7 +1,7 @@
-const Sequelize = require("sequelize");
+import { Sequelize } from "sequelize";
 const db = new Sequelize(
   process.env.DATABASE_URL || "postgres://localhost:5432/quoth",
   { logging: false },
 );
 
-module.exports = db;
+export default db;

@@ -1,4 +1,4 @@
-const { Quote } = require("./db");
+import { Quote } from "./db";
 
 const quothSeedData = [
   {
@@ -11,4 +11,4 @@ const seedData = async () => {
   await Quote.create(quothSeedData[0]);
 };
 
-module.exports = { seedData };
+export default seedData;

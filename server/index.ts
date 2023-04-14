@@ -1,7 +1,8 @@
+import app from "./api/app";
+import db from "./db/db";
+import seedData from "./seed";
+
 const port = process.env.PORT || 3000;
-const app = require("./api/app.js");
-const { db } = require("./db/index.js");
-const { seedData } = require("./seed.js");
 
 const init = async () => {
   await db.sync({ force: true });

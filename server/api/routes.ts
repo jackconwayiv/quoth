@@ -1,6 +1,6 @@
-const express = require("express");
+import express from "express";
+import { Quote } from "../db";
 const router = express.Router();
-const { Quote } = require("../db");
 
 router.get("/", async (req, res, next) => {
   try {
@@ -29,7 +29,6 @@ router.post("/", async (req, res, next) => {
 //     next(error);
 //   }
 // });
-
 
 // router.delete("/:campusId", async (req, res, next) => {
 //   try {
@@ -66,4 +65,4 @@ router.post("/", async (req, res, next) => {
 //   }
 // });
 
-module.exports = router;
+export default router;

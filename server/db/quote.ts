@@ -1,9 +1,9 @@
-const { Sequelize } = require("sequelize");
-const db = require("./db");
+import { DataTypes } from "sequelize";
+import db from "./db";
 
 const Quote = db.define("quote", {
   quote: {
-    type: Sequelize.STRING,
+    type: DataTypes.STRING,
     allowNull: false,
     validate: {
       notEmpty: {
@@ -12,7 +12,7 @@ const Quote = db.define("quote", {
     },
   },
   quoter: {
-    type: Sequelize.STRING,
+    type: DataTypes.STRING,
     allowNull: false,
     validate: {
       notEmpty: {
@@ -22,4 +22,4 @@ const Quote = db.define("quote", {
   },
 });
 
-module.exports = { Quote };
+export default Quote;
